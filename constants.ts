@@ -38,12 +38,12 @@ export const gamesData: Game[] = [
         platforms: 'android-apple'
     },
     {
-        name: "B-Sides Remixes",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7rxWtnc_QL9FVdJmWM7frnS-T6Cz84jdoLg&s",
-        description: "Re-experience the original FNF weeks with a fresh coat of paint and all-new remixes! B-Sides offers a colorful visual overhaul and challenging new charts for every song, providing a fun and vibrant twist on the classic game.",
-        size: "67 MB",
-        downloads: "1.2M",
-        reviews: "56.3K",
+        name: "Indie Cross",
+        image: "https://images.genius.com/ae058a04a4e0a96574306998632ae328.1000x1000x1.png",
+        description: "A massive crossover mod featuring characters from Cuphead, Sans from Undertale, and Bendy. Prepare for some of the most challenging and visually stunning battles in FNF history, each with unique mechanics.",
+        size: "250 MB",
+        downloads: "2.2M",
+        reviews: "95.1K",
         platforms: 'android-apple'
     },
     {
@@ -92,21 +92,12 @@ export const gamesData: Game[] = [
         platforms: 'android-apple'
     },
     {
-        name: "Psych Engine",
-        image: "https://img.itch.zone/aW1nLzczOTMxMDcuanBn/original/rf1y5L.jpg",
-        description: "The ultimate engine for FNF modding. Psych Engine provides a powerful and accessible framework for creators, and a highly optimized, feature-rich experience for players. The backbone of many popular mods.",
-        size: "58 MB",
+        name: "VS Sonic.exe",
+        image: "https://avatars.mds.yandex.net/i?id=a562bf1b6861adaee9f41ce2d2485715f62193cf-5711249-images-thumbs&n=13",
+        description: "Enter a world of digital horror in this terrifying mod based on the infamous creepypasta. Battle a demonic version of Sonic in a series of glitchy, unsettling, and incredibly difficult songs. Are you fast enough to survive?",
+        size: "155 MB",
         downloads: "2.5M",
-        reviews: "102.3K",
-        platforms: 'android-apple'
-    },
-    {
-        name: "Complete Mobile Pack",
-        image: "https://lh3.googleusercontent.com/Y6Wpf8sFgH1X8DBmTHykOVcC-eE8-DcT46OaRJuLjyPcI_7GrrtKjzCB-miJwOCtaOnMGu1DHsgH990D7FzlrTzdKi1z-y2A1Co=rw",
-        description: "Your entire FNF mod collection in one massive download! This pack bundles the most popular and beloved mods into a single, mobile-optimized experience, giving you instant access to countless hours of rhythm-based fun.",
-        size: "847 MB",
-        downloads: "15M",
-        reviews: "648K",
+        reviews: "105.3K",
         platforms: 'android-apple'
     }
 ].sort((a, b) => a.name.localeCompare(b.name));

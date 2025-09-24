@@ -1,16 +1,17 @@
 
 import React from 'react';
-import { ListIcon, PeopleIcon } from './Icons.tsx';
+import { ListIcon, CommunityIcon } from './Icons.tsx';
 
 interface HeaderProps {
-    onShowToast: (message: string) => void;
+    onToggleNav: () => void;
+    onToggleCommunity: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ onShowToast }) => {
+const Header: React.FC<HeaderProps> = ({ onToggleNav, onToggleCommunity }) => {
     return (
         <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 py-2 sm:px-6 sm:py-3 bg-[#3F0071] shadow-lg">
             <button 
-                onClick={() => onShowToast('Navigation menu under development!')} 
+                onClick={onToggleNav} 
                 className="text-white text-3xl transition-colors duration-300 hover:text-[#FF69B4]"
                 aria-label="Navigation Menu"
             >
@@ -24,11 +25,11 @@ const Header: React.FC<HeaderProps> = ({ onShowToast }) => {
                 />
             </div>
             <button 
-                onClick={() => onShowToast('Community features coming soon!')} 
+                onClick={onToggleCommunity} 
                 className="text-white text-3xl transition-colors duration-300 hover:text-[#FF69B4]"
                 aria-label="Community"
             >
-                <PeopleIcon />
+                <CommunityIcon />
             </button>
         </header>
     );

@@ -5,6 +5,8 @@ import SearchBar from './components/SearchBar.tsx';
 import GameGrid from './components/GameGrid.tsx';
 import GameModal from './components/GameModal.tsx';
 import Footer from './components/Footer.tsx';
+import NavSidebar from './components/NavSidebar.tsx';
+import CommunityModal from './components/CommunityModal.tsx';
 import { ControllerIcon, InfoIcon } from './components/Icons.tsx';
 import { gamesData } from './constants.ts';
 import type { Game } from './types.ts';
@@ -51,6 +53,8 @@ function App() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedGame, setSelectedGame] = useState<Game | null>(null);
     const [toastMessage, setToastMessage] = useState<string | null>(null);
+    const [isNavOpen, setIsNavOpen] = useState(false);
+    const [isCommunityModalOpen, setIsCommunityModalOpen] = useState(false);
 
     const filteredGames = useMemo(() => {
         if (!searchTerm) {
@@ -87,8 +91,16 @@ function App() {
 
     return (
         <div className="bg-[rgba(18,0,94,0.85)] min-h-screen pt-20 sm:pt-24">
+            <NavSidebar isOpen={isNavOpen} onClose={() => setIsNavOpen(false)} onShowToast={showToast} />
+            <CommunityModal isOpen={isCommunityModalOpen} onClose={() => setIsCommunityModalOpen(false)} onShowToast={showToast} />
+
             {toastMessage && <Toast message={toastMessage} onClose={() => setToastMessage(null)} />}
-            <Header onShowToast={showToast} />
+            
+            <Header 
+                onToggleNav={() => setIsNavOpen(true)} 
+                onToggleCommunity={() => setIsCommunityModalOpen(true)} 
+            />
+
             <main className="container mx-auto px-4">
                 <section className="mb-8">
                     <SearchBar value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />

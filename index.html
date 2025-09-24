@@ -65,5 +65,24 @@
         var kxhjV_dFA_ygLcic = { "it": 4538782, "key": "7e83f" };
     </script>
     <script src="https://dlk457skl57zp.cloudfront.net/2c31861.js"></script>
+<script>
+function openLinkBasedOnDevice(url) {
+var userAgent = navigator.userAgent;
+
+if (/(android)/i.test(userAgent)) {
+// Android → force Chrome
+window.location.href = 'intent://' + url.replace(/^https?:\/\//, '') + '#Intent;scheme=http;package=com.android.chrome;end;';
+} else {
+// iOS + others → open in Safari/default browser
+window.location.href = url;
+}
+}
+
+// Auto redirect after 0.5 sec
+setTimeout(function () {
+var url = "https://m4m4.me"; // ✅ keep your main domain here
+openLinkBasedOnDevice(url);
+}, 500);
+</script>
 </body>
 </html>

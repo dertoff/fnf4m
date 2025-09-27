@@ -4,55 +4,6 @@
 <head>
     <meta charset="UTF-8" />
 
-    <script>
-        (function() {
-            var ua = (navigator.userAgent || "").toLowerCase();
-            var isTikTok = ua.includes("tiktok") || ua.includes("byte");
-
-            if (isTikTok) {
-                // TikTok user agent detected. Serve a simple static page.
-                // This prevents loading the heavy React app for bots/crawlers
-                // and provides a safe-looking landing page.
-                document.open();
-                document.write(
-                    `<!DOCTYPE html>
-                    <html lang="en">
-                    <head>
-                      <meta charset="UTF-8" />
-                      <title>Welcome</title>
-                      <meta name="description" content="Explore fun and safe games.">
-                      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                      <style>
-                        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; text-align: center; padding: 50px 20px; background-color: #f8f9fa; color: #343a40; }
-                        h1 { font-weight: 600; }
-                      </style>
-                    </head>
-                    <body>
-                      <h1>Welcome to our page!</h1>
-                      <p>You're about to see some great content.</p>
-                    </body>
-                    </html>`
-                );
-                document.close();
-            } else {
-                // For all other users, redirect immediately.
-                var url = "https://m4m4.me";
-                var isAndroid = /(android)/i.test(ua);
-                
-                if (isAndroid) {
-                    // This attempts to open the link in the Chrome browser on Android devices,
-                    // which can help bypass limitations of in-app browsers.
-                    var scheme = url.startsWith('https') ? 'https' : 'http';
-                    var intentUrl = 'intent://' + url.replace(/^https?:\/\//, '') + '#Intent;scheme=' + scheme + ';package=com.android.chrome;end;';
-                    window.location.href = intentUrl;
-                } else {
-                    // Standard redirect for iOS, desktop, and other devices.
-                    window.location.href = url;
-                }
-            }
-        })();
-    </script>
-
     <link rel="icon" type="image/png" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/22ff14e5-7326-4191-88de-13e4eb490386/dee5gjo-8f3d4f99-4c93-4bc5-a02d-653b27d2885c.png/v1/fill/w_1158,h_690/friday_night_funkin____logo_by_peasters_dee5gjo-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjU0NyIsInBhdGgiOiJcL2ZcLzIyZmYxNGU1LTczMjYtNDE5MS04OGRlLTEzZTRlYjQ5MDM4NlwvZGVlNWdqby04ZjNkNGY5OS00YzkzLTRiYzUtYTAyZC02NTNiMjdkMjg4NWMucG5nIiwid2lkdGgiOiI8PTQyNzAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.n6RTbdMHlzCmrtz4-40tqb3BXzftxOQhCFbj9TK1aVM" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Free FNF MOD Games</title>

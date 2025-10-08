@@ -40,6 +40,18 @@ export const AppleIcon: React.FC = () => (
     </svg>
 );
 
+export const WindowsIcon: React.FC = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M0 2.5h6.5v11H0V2.5zm7.5 0H16v4.91H7.5V2.5zm0 5.82H16V13.5H7.5V8.32z"/>
+    </svg>
+);
+
+export const XboxIcon: React.FC = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M6.436 2.54a.5.5 0 0 0-.435.252L2.001 9.423a.5.5 0 0 0 .435.747h3.425a.5.5 0 0 0 .435-.252L9.999 3.547a.5.5 0 0 0-.435-.747H6.436zM9.363 3.547l-1.94 3.32h3.426a.5.5 0 0 0 .435-.252l2.001-6.876a.5.5 0 0 0-.435-.747H9.363zM3.465 11.214a.5.5 0 0 0-.435.252L.03 14.84a.5.5 0 0 0 .435.747h6.073a.5.5 0 0 0 .435-.252L9.974 8.46a.5.5 0 0 0-.435-.747H3.465zm6.538 0-1.94 3.32h3.426a.5.5 0 0 0 .435-.252l2.001-6.876a.5.5 0 0 0-.435-.747h-3.48z"/>
+    </svg>
+);
+
 export const DownloadCloudIcon: React.FC = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" className="bi bi-cloud-arrow-down" viewBox="0 0 16 16">
         <path fillRule="evenodd" d="M7.646 10.854a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 9.293V5.5a.5.5 0 0 0-1 0v3.793L6.354 8.146a.5.5 0 1 0-.708.708l2 2z"/>

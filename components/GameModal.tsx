@@ -11,7 +11,7 @@ interface GameModalProps {
 
 const InfoItem: React.FC<{ icon: React.ReactNode; label: string; value: string }> = ({ icon, label, value }) => (
     <div className="flex flex-col items-center text-gray-200">
-        <div className="text-cyan-400 text-2xl mb-1">{icon}</div>
+        <div className="text-purple-400 text-2xl mb-1">{icon}</div>
         <div className="font-semibold">{value}</div>
         <div className="text-sm text-gray-400">{label}</div>
     </div>
@@ -20,13 +20,13 @@ const InfoItem: React.FC<{ icon: React.ReactNode; label: string; value: string }
 const GameModal: React.FC<GameModalProps> = ({ game, onClose, onDownload }) => {
     return (
         <div 
-            className="fixed inset-0 bg-black/85 z-[999] flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/90 z-[999] flex items-center justify-center p-4"
             onClick={onClose}
             aria-modal="true"
             role="dialog"
         >
             <div 
-                className="relative bg-[#1A1A2E] rounded-2xl p-6 md:p-8 max-w-lg md:max-w-2xl w-full mx-auto shadow-2xl animate-slideInUp text-center"
+                className="relative bg-[#1c2128] rounded-2xl p-6 md:p-8 max-w-lg md:max-w-2xl w-full mx-auto shadow-2xl animate-slideInUp text-center"
                 onClick={(e) => e.stopPropagation()}
             >
                 <button 
@@ -41,12 +41,12 @@ const GameModal: React.FC<GameModalProps> = ({ game, onClose, onDownload }) => {
                     <img 
                         src={game.image} 
                         alt={`${game.name} Icon`}
-                        className="w-32 h-32 md:w-40 md:h-40 object-cover inline-block border-8 border-[#1A1A2E] rounded-2xl shadow-lg"
-                        onError={(e) => (e.currentTarget.src = 'https://placehold.co/180x180/1A1A2E/ffffff?text=FNF+MOD')}
+                        className="w-32 h-32 md:w-40 md:h-40 object-cover inline-block border-8 border-[#1c2128] rounded-2xl shadow-lg"
+                        onError={(e) => (e.currentTarget.src = 'https://placehold.co/180x180/1c2128/ffffff?text=MOD')}
                     />
                 </div>
 
-                <h2 className="mt-4 font-bold text-2xl md:text-3xl text-[#FF69B4]">{game.name}</h2>
+                <h2 className="mt-4 font-bold text-2xl md:text-3xl text-[#39FF14]">{game.name}</h2>
                 <p className="text-gray-300 my-4 leading-relaxed">{game.description}</p>
                 
                 <div className="flex justify-evenly items-center my-6 flex-wrap gap-4">
@@ -58,7 +58,7 @@ const GameModal: React.FC<GameModalProps> = ({ game, onClose, onDownload }) => {
                 <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
                     <button 
                         onClick={onDownload}
-                        className="bg-gradient-to-b from-[#E040FB] to-[#7B1FA2] text-white font-semibold py-3 px-12 rounded-full text-lg shadow-[0_0.4rem_1rem_0_rgba(224,64,251,0.4)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_0.6rem_1.2rem_0_rgba(224,64,251,0.6)] flex items-center justify-center w-full sm:w-auto mx-auto sm:mx-0 gap-2"
+                        className="bg-gradient-to-b from-[#39FF14] to-green-600 text-black font-semibold py-3 px-12 rounded-full text-lg shadow-[0_0.4rem_1rem_0_rgba(57,255,20,0.5)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_0.6rem_1.2rem_0_rgba(57,255,20,0.7)] flex items-center justify-center w-full sm:w-auto mx-auto sm:mx-0 gap-2"
                         aria-label={`Download ${game.name} MOD`}
                     >
                        <DownloadCloudFillIcon />

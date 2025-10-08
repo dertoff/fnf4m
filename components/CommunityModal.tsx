@@ -19,7 +19,7 @@ const CommunityModal: React.FC<CommunityModalProps> = ({ isOpen, onClose, onShow
             role="dialog"
         >
             <div 
-                className="relative bg-[#1A1A2E] rounded-2xl p-6 md:p-8 max-w-lg w-full mx-auto shadow-2xl animate-slideInUp text-center"
+                className="relative bg-[#1c2128] rounded-2xl p-6 md:p-8 max-w-lg w-full mx-auto shadow-2xl animate-slideInUp text-center"
                 onClick={(e) => e.stopPropagation()}
             >
                 <button 
@@ -31,14 +31,14 @@ const CommunityModal: React.FC<CommunityModalProps> = ({ isOpen, onClose, onShow
                 </button>
                 
                 <div className="w-full text-center">
-                    <div className="inline-block p-4 bg-purple-500/20 rounded-full mb-4">
-                        <CommunityIcon className="text-5xl text-purple-400" />
+                    <div className="inline-block p-4 bg-green-500/20 rounded-full mb-4">
+                        <CommunityIcon className="text-5xl text-[#39FF14]" />
                     </div>
                 </div>
 
-                <h2 className="mt-2 font-bold text-2xl md:text-3xl text-[#FF69B4]">Community Hub Coming Soon!</h2>
+                <h2 className="mt-2 font-bold text-2xl md:text-3xl text-[#39FF14]">Community Hub Coming Soon!</h2>
                 <p className="text-gray-300 my-4 leading-relaxed">
-                    Get ready to connect with other FNF fans! We're building an awesome community space where you can:
+                    Get ready to connect with other gaming fans! We're building an awesome community space where you can:
                 </p>
                 <ul className="text-left text-gray-300 list-disc list-inside mx-auto max-w-md space-y-2 my-6">
                     <li>Rate and review your favorite MODs.</li>
@@ -53,7 +53,7 @@ const CommunityModal: React.FC<CommunityModalProps> = ({ isOpen, onClose, onShow
                             onShowToast('Thanks! We will notify you when it is ready!');
                             onClose();
                         }}
-                        className="bg-gradient-to-b from-[#00FFFF] to-[#1e6f6f] text-white font-semibold py-3 px-8 rounded-full text-lg shadow-[0_0.4rem_1rem_0_rgba(0,255,255,0.3)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_0.6rem_1.2rem_0_rgba(0,255,255,0.5)] flex items-center justify-center gap-2"
+                        className="bg-gradient-to-b from-[#39FF14] to-green-600 text-black font-semibold py-3 px-8 rounded-full text-lg shadow-[0_0.4rem_1rem_0_rgba(57,255,20,0.4)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_0.6rem_1.2rem_0_rgba(57,255,20,0.6)] flex items-center justify-center gap-2"
                         aria-label="Notify me when community features are available"
                     >
                        <BellIcon />

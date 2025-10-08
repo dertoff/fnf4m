@@ -6,5 +6,5 @@ export interface Game {
   size: string;
   downloads: string;
   reviews: string;
-  platforms: string;
+  platforms: ('android' | 'apple' | 'windows' | 'xbox')[];
 }

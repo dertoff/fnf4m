@@ -10,7 +10,7 @@ interface GameGridProps {
 
 const GameGrid: React.FC<GameGridProps> = ({ games, onGameSelect }) => {
     if (games.length === 0) {
-        return <div className="text-center text-gray-300 text-lg my-16">No FNF MODs found matching your search.</div>;
+        return <div className="text-center text-gray-300 text-lg my-16">No game mods found matching your search.</div>;
     }
 
     return (

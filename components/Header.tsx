@@ -9,24 +9,24 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ onToggleNav, onToggleCommunity }) => {
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 py-2 sm:px-6 sm:py-3 bg-[#3F0071] shadow-lg">
+        <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 py-2 sm:px-6 sm:py-3 bg-[#161b22] shadow-lg">
             <button 
                 onClick={onToggleNav} 
-                className="text-white text-3xl transition-colors duration-300 hover:text-[#FF69B4]"
+                className="text-white text-3xl transition-colors duration-300 hover:text-[#39FF14]"
                 aria-label="Navigation Menu"
             >
                 <ListIcon />
             </button>
             <div className="h-10 sm:h-12">
                 <img 
-                    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/22ff14e5-7326-4191-88de-13e4eb490386/dee5gjo-8f3d4f99-4c93-4bc5-a02d-653b27d2885c.png/v1/fill/w_1158,h_690/friday_night_funkin____logo_by_peasters_dee5gjo-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjU0NyIsInBhdGgiOiJcL2ZcLzIyZmYxNGU1LTczMjYtNDE5MS04OGRlLTEzZTRlYjQ5MDM4NlwvZGVlNWdqby04ZjNkNGY5OS00YzkzLTRiYzUtYTAyZC02NTNiMjdkMjg4NWMucG5nIiwid2lkdGgiOiI8PTQyNzAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.n6RTbdMHlzCmrtz4-40tqb3BXzftxOQhCFbj9TK1aVM" 
-                    alt="Free FNF MOD Games Logo" 
+                    src="https://i.ibb.co/9vRw3Sg/logo.png" 
+                    alt="MOD Games Showcase Logo" 
                     className="h-full object-contain"
                 />
             </div>
             <button 
                 onClick={onToggleCommunity} 
-                className="text-white text-3xl transition-colors duration-300 hover:text-[#FF69B4]"
+                className="text-white text-3xl transition-colors duration-300 hover:text-[#39FF14]"
                 aria-label="Community"
             >
                 <CommunityIcon />

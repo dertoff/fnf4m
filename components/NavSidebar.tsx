@@ -9,8 +9,8 @@ interface NavSidebarProps {
 }
 
 const NavLink: React.FC<{ icon: React.ReactNode; label: string; onClick: () => void; }> = ({ icon, label, onClick }) => (
-    <a href="#" onClick={(e) => { e.preventDefault(); onClick(); }} className="flex items-center p-4 text-lg text-gray-200 rounded-lg hover:bg-purple-500/20 transition-colors duration-200">
-        <span className="text-cyan-400 mr-4 text-xl">{icon}</span>
+    <a href="#" onClick={(e) => { e.preventDefault(); onClick(); }} className="flex items-center p-4 text-lg text-gray-200 rounded-lg hover:bg-green-500/20 transition-colors duration-200">
+        <span className="text-[#39FF14] mr-4 text-xl">{icon}</span>
         <span>{label}</span>
     </a>
 );
@@ -24,7 +24,7 @@ const NavSidebar: React.FC<NavSidebarProps> = ({ isOpen, onClose, onShowToast })
                 aria-hidden={!isOpen}
             ></div>
             <aside 
-                className={`fixed top-0 left-0 h-full w-72 bg-[#1A1A2E] shadow-2xl z-[1001] p-6 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
+                className={`fixed top-0 left-0 h-full w-72 bg-[#1c2128] shadow-2xl z-[1001] p-6 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
                 role="navigation"
                 aria-label="Main Navigation"
             >

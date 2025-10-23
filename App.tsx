@@ -7,14 +7,14 @@ import GameModal from './components/GameModal.tsx';
 import Footer from './components/Footer.tsx';
 import NavSidebar from './components/NavSidebar.tsx';
 import CommunityModal from './components/CommunityModal.tsx';
-import { ControllerIcon, InfoIcon } from './components/Icons.tsx';
+import { InfoIcon } from './components/Icons.tsx';
 import { gamesData } from './constants.ts';
 import type { Game } from './types.ts';
 
 // Extend the Window interface to include the external script's function
 declare global {
     interface Window {
-        _Jl?: () => void;
+        og_load?: () => void;
     }
 }
 
@@ -37,7 +37,7 @@ const Toast: React.FC<ToastProps> = ({ message, onClose }) => {
 
     return (
         <div 
-            className="fixed top-20 sm:top-24 left-1/2 -translate-x-1/2 z-[1000] bg-gradient-to-r from-purple-500 to-green-400 text-white px-6 py-3 rounded-full shadow-lg flex items-center gap-3 animate-slideInDown"
+            className="fixed top-20 sm:top-24 left-1/2 -translate-x-1/2 z-[1000] bg-gradient-to-r from-cyan-500 to-sky-500 text-white px-6 py-3 rounded-full shadow-lg flex items-center gap-3 animate-slideInDown"
             role="alert"
             aria-live="assertive"
         >
@@ -81,10 +81,10 @@ function App() {
 
     const handleDownload = () => {
         console.log("Download button clicked. Checking for locker function...");
-        if (typeof window._Jl === 'function') {
-            window._Jl();
+        if (typeof window.og_load === 'function') {
+            window.og_load();
         } else {
-            console.error("AdbluMedia locker function (_Jl) not found. The script might be blocked or failed to load.");
+            console.error("Locker function (og_load) not found. The script might be blocked or failed to load.");
             alert("Error: Could not start the download process. Please disable any ad-blockers and refresh the page.");
         }
     };
@@ -104,12 +104,9 @@ function App() {
             <main className="container mx-auto px-4">
                 <section className="mb-8">
                     <SearchBar value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
-                    <div className="flex items-center mt-8">
-                        <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-[#39FF14] text-black shadow-[0_0.25rem_0.75rem_0_rgba(57,255,20,0.4)]">
-                            <ControllerIcon />
-                        </div>
-                        <h1 className="ml-4 text-2xl font-bold">Top Game MODs</h1>
-                    </div>
+                    <h1 className="text-center text-4xl sm:text-5xl font-bold mt-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-sky-500 [text-shadow:0_0_15px_rgba(6,182,212,0.4)]">
+                        Top Roblox Scripts
+                    </h1>
                 </section>
 
                 <GameGrid games={filteredGames} onGameSelect={handleGameSelect} />

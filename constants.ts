@@ -5,22 +5,31 @@ import type { Game } from './types.ts';
 // is correctly validated before sorting the array in place.
 export const gamesData: Game[] = [
     {
-        name: "Forza Horizon 5",
-        image: "https://avatars.mds.yandex.net/i?id=5185e77357f0962e9a5a9e3ec0d49a2e6a96faac-12522553-images-thumbs&n=13",
-        description: "Unlock the ultimate driving experience in Forza Horizon 5 with community-made mods. Add custom cars, unlock new maps, and tweak performance to create your personalized racing paradise in the vibrant landscapes of Mexico.",
-        size: "1.2 GB",
-        downloads: "800K",
-        reviews: "45K",
-        platforms: ['windows', 'xbox']
+        name: "99 Nights in the Forest",
+        image: "https://tr.rbxcdn.com/180DAY-4a7114ff1394679d266f6202114848e7/256/256/Image/Webp/noFilter",
+        description: "A survival script that challenges you to last 99 nights in a spooky, procedurally generated forest. Craft tools, build shelters, and fend off mysterious creatures that lurk in the dark.",
+        size: "250 KB",
+        downloads: "1.2M",
+        reviews: "15K",
+        platforms: ['windows', 'xbox', 'android', 'apple']
     },
     {
-        name: "VS Whitty",
-        image: "https://i1.sndcdn.com/artworks-TNcPPxNf1MZEPuX0-dGJl0Q-t500x500.jpg",
-        description: "Face off against Whitty, the short-fused rockstar with a ballistic temper. This iconic mod features intense, fast-paced tracks that will test your rhythm to its absolute limit. Can you keep your cool before he blows up?",
-        size: "95 MB",
-        downloads: "3M",
-        reviews: "89.2K",
-        platforms: ['android', 'apple']
+        name: "Plants Vs Brainrots",
+        image: "https://tr.rbxcdn.com/180DAY-b2065d98fbb7f2ecfcf2b0924ecd4a11/256/256/Image/Webp/noFilter",
+        description: "A tower defense script inspired by the classic game. Plant an arsenal of powerful flora to defend your garden from waves of goofy 'Brainrot' zombies. Unlock new plants and strategies to survive the onslaught.",
+        size: "310 KB",
+        downloads: "950K",
+        reviews: "11K",
+        platforms: ['windows', 'xbox', 'android', 'apple']
+    },
+    {
+        name: "Steal a Brainrot",
+        image: "https://tr.rbxcdn.com/180DAY-fa226c6d1718c7d8d7a94495bd79f04f/256/256/Image/Webp/noFilter",
+        description: "A hilarious heist script where you and your team must infiltrate a high-security meme vault to steal the legendary 'Brainrot'. Dodge lasers, solve puzzles, and outsmart guards in this wacky adventure.",
+        size: "180 KB",
+        downloads: "2.5M",
+        reviews: "32K",
+        platforms: ['windows', 'xbox', 'android', 'apple']
     }
 ];
 

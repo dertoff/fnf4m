@@ -9,8 +9,8 @@ interface NavSidebarProps {
 }
 
 const NavLink: React.FC<{ icon: React.ReactNode; label: string; onClick: () => void; }> = ({ icon, label, onClick }) => (
-    <a href="#" onClick={(e) => { e.preventDefault(); onClick(); }} className="flex items-center p-4 text-lg text-gray-200 rounded-lg hover:bg-green-500/20 transition-colors duration-200">
-        <span className="text-[#39FF14] mr-4 text-xl">{icon}</span>
+    <a href="#" onClick={(e) => { e.preventDefault(); onClick(); }} className="flex items-center p-4 text-lg text-gray-200 rounded-lg hover:bg-cyan-500/20 transition-colors duration-200">
+        <span className="text-cyan-400 mr-4 text-xl">{icon}</span>
         <span>{label}</span>
     </a>
 );
@@ -36,7 +36,7 @@ const NavSidebar: React.FC<NavSidebarProps> = ({ isOpen, onClose, onShowToast })
                 </div>
                 <nav className="flex flex-col gap-2">
                     <NavLink icon={<HomeIcon />} label="Home" onClick={onClose} />
-                    <NavLink icon={<StarIcon />} label="Top MODs" onClick={() => onShowToast('Top MODs page is coming soon!')} />
+                    <NavLink icon={<StarIcon />} label="Top Scripts" onClick={() => onShowToast('Top Scripts page is coming soon!')} />
                     <NavLink icon={<NewIcon />} label="New Releases" onClick={() => onShowToast('New Releases page is coming soon!')} />
                     <NavLink icon={<CategoryIcon />} label="Categories" onClick={() => onShowToast('Categories page is coming soon!')} />
                     <NavLink icon={<AboutIcon />} label="About" onClick={() => onShowToast('About page is coming soon!')} />
